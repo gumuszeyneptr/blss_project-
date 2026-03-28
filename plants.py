@@ -1,0 +1,100 @@
+PLANTS = {
+    "tatlı_patates": {
+        "name": "Tatlı Patates",
+        "latin": "Ipomoea batatas",
+        "cycle": 120,
+        "ncer": 8.2,
+        "o2_factor": 0.73,
+        "biomass_factor": 0.90,
+        "eth_peak": 47,
+        "fvfm_base": 0.84,
+        "co2_optimum_ppm": 750,
+        "phases": [
+            {"label": "Vejetatif Büyüme", "days": 40},
+            {"label": "Yumru Başlangıcı", "days": 30},
+            {"label": "Şişme (Bulking)",  "days": 50},
+        ],
+        "color": "#639922",
+    },
+    "cüce_domates": {
+        "name": "Cüce Domates",
+        "latin": "Lycopersicon esculentum 'Red Robin'",
+        "cycle": 90,
+        "ncer": 11.4,
+        "o2_factor": 1.02,
+        "biomass_factor": 0.60,
+        "eth_peak": 85,
+        "fvfm_base": 0.86,
+        "co2_optimum_ppm": 1000,
+        "phases": [
+            {"label": "Çimlenme",          "days": 7},
+            {"label": "Vejetatif Gelişim", "days": 28},
+            {"label": "Çiçeklenme",        "days": 15},
+            {"label": "Meyve ve Hasat",    "days": 40},
+        ],
+        "color": "#D85A30",
+    },
+    "cüce_bezelye": {
+        "name": "Cüce Bezelye",
+        "latin": "Pisum sativum 'Earligreen'",
+        "cycle": 60,
+        "ncer": 6.8,
+        "o2_factor": 0.61,
+        "biomass_factor": 0.40,
+        "eth_peak": 25,
+        "fvfm_base": 0.85,
+        "co2_optimum_ppm": 800,
+        "phases": [
+            {"label": "Çimlenme",    "days": 7},
+            {"label": "Vejetatif",   "days": 13},
+            {"label": "Çiçeklenme", "days": 15},
+            {"label": "Hasat",       "days": 25},
+        ],
+        "color": "#1D9E75",
+    },
+    "mikroyeşillikler": {
+        "name": "Mikroyeşillikler",
+        "latin": "Brokoli / Turp / Mizuna",
+        "cycle": 21,
+        "ncer": 4.1,
+        "o2_factor": 0.38,
+        "biomass_factor": 0.20,
+        "eth_peak": 8,
+        "fvfm_base": 0.87,
+        "co2_optimum_ppm": 700,
+        "phases": [
+            {"label": "Çimlenme", "days": 4},
+            {"label": "Büyüme",   "days": 10},
+            {"label": "Hasat",    "days": 7},
+        ],
+        "color": "#3C3489",
+    },
+    "spirulina": {
+        "name": "Spirulina",
+        "latin": "Arthrospira platensis",
+        "cycle": 8,
+        "ncer": 18.6,
+        "o2_factor": 0.016,
+        "biomass_factor": 0.0,
+        "eth_peak": 0,
+        "fvfm_base": 0.89,
+        "co2_optimum_ppm": 800,
+        "phases": [
+            {"label": "Büyüme", "days": 5},
+            {"label": "Hasat",  "days": 3},
+        ],
+        "color": "#185FA5",
+    },
+}
+
+SPIRULINA_O2_FACTOR = 1.335
+CO2_PER_PERSON      = 1.08
+O2_PER_PERSON       = 0.89
+
+VOC_PROFILES = {
+    "Terpenoidler":   {"stress_w": 0.6, "path_w": 0.2, "color": "#3C3489", "note": "Abiyotik stres / sıcaklık"},
+    "Benzenoidler":   {"stress_w": 0.1, "path_w": 1.2, "color": "#D85A30", "note": "Patojen / otçul saldırı"},
+    "GLV":            {"stress_w": 0.8, "path_w": 0.1, "color": "#1D9E75", "note": "Genel stres sinyali"},
+    "Metanol":        {"stress_w": 0.05,"path_w": 0.9, "color": "#854F0B", "note": "Mikrobiyal bozunma (%78-99)"},
+    "Etilen (C2H4)":  {"stress_w": 0.4, "path_w": 0.3, "color": "#185FA5", "note": "Olgunlaşma hormonu"},
+}
